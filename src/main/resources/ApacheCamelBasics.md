@@ -77,7 +77,7 @@
 
 **Threading Model**
 * Apache Camel threading model based on JDK concurrency API : ExecutorService
-* SEDA (Staged Event-Driven Architecture)
+* SEDA (Staged Event-Driven Architecture) - Blocking Queue.
 * Threads DSL(on route level we can define the threading : async processing , we can provide different threadpool for better performance)
 * At some components level: JMS Jetty
   * Default Profile
