@@ -42,10 +42,10 @@
 
 **Camel Exchange**
 
-* A Camel exchange is the message container during routing
-  * The Camel exchange hold a pattern property that can be either
+* A Camel exchange is the message container during routing. The Camel exchange hold a pattern property that can be either
     * InOnly - A one-way message(also known as a event message)
     * InOut - A request and response message
+        .[](img.png)
 
 
 
