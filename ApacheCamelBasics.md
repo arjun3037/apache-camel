@@ -45,7 +45,57 @@
 * A Camel exchange is the message container during routing. The Camel exchange hold a pattern property that can be either
     * InOnly - A one-way message(also known as a event message)
     * InOut - A request and response message
-     [exchange image](https://github.com/arjun3037/apache-camel/blob/main/img.png)
+     [exchange image](https://github.com/arjun3037/apache-camel/blob/main/Exchange.png)
+    * MEP - Message exchange pattern (InOnly , Inout)
+
+**Processor**
+
+**Route**
+ * Java DSL
+
+        from("file:data/inbox"")
+           .to("jms:queue:order")
+ * Spring DSL
+  
+       <route>
+         <from urk = "file:/data/inbox" />
+        <to uri = "jms:queue:order"/>
+       </route>
+
+**Endpoint** - The end of channel through which a system can send a receive messages
+ * Consumer Endpoint = from()
+ * Producer Endpoint = to()
+ * Expressed as URI : direct://to-my-component
+
+**Expression & Predicates**
+ * WE can add some condition based on we can opt different routes. predicate can be filter
+
+**Camel Context**
+ * Camel Runtime system which keeps all piece together
+ * Usually we have one Camel context in an app but we can have more then 1 camel contect but do communicattion is complex between them
+
+
+**Threading Model**
+* Apache Camel threading model based on JDK concurrency API : ExecutorService
+* SEDA (Staged Event-Driven Architecture)
+* Threads DSL(on route level we can define the threading : async processing , we can provide different threadpool for better performance)
+* At some components level: JMS Jetty
+  * Default Profile
+
+          poolSize = 10
+          maxPoolSize = 20
+          maxQueueSize=1000
+          allowCoreThreadTimeOut = true
+          rejectedPolicy=CallerRuns
+* Wiretap - sending a copy of message somewhere else
+* Throttler - limit a number of messages to an endpoint
+* Multicast - Same message to number of endPoints
+
+
+
+
+
+                
 
 
 
