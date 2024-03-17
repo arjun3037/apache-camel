@@ -12,7 +12,7 @@
 
 5. EIP like --> Aggregator , splitter , wiretap(to see the message when sender send to receiver)
 
-Why Integration Patterns ?
+**Why Integration Patterns** ?
     1. Different Software has different formats
         JSON, XML, Protocol buffer
     2. Point-to-point connection vs Hub vs Spoke
