@@ -30,12 +30,15 @@ EIP Types -
     7. System Management
 
 
-Camel Core
-Camel Spring boot
-Camel K
-Camel Kafka Connector
-Camel Quarkus
-Camel Karaf
+Apache Camel components
+
+    Camel Core
+    Camel Spring boot
+    Camel K
+    Camel Kafka Connector
+    Camel Quarkus
+    Camel Karaf
+
 
 
 
